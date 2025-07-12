@@ -18,7 +18,11 @@ function Hero() {
 
   return (
     <div className="bg-[#E45A78] h-screen w-full overflow-hidden">
+      
       <div className="mt-10">
+      <motion.div
+        initial={{opacity: 0, y: 50}}
+        animate={{opacity:1, y: 0}} > 
         <div className="flex flex-col items-center justify-center">
           <div className="border text-2xl rounded-4xl px-6 py-2">Developer. Designer. Debugger.</div>
           
@@ -36,11 +40,11 @@ function Hero() {
         style={{ imageRendering: 'pixelated' }}
       >
         <p>Figuring how to <br /> center a div</p>
-      </motion.div>
-
+        </motion.div>
 
           <img src="/Group-2.svg" alt="Manya" className="pt-10 hover:scale-110" />
-
+          
+          
           <RetroAboutCard />
 
           <div className="relative text-4xl text-center mt-8">
@@ -56,7 +60,9 @@ function Hero() {
             </div>
             
           </div>
+          
         </div>
+        </motion.div>
       </div>
 
       {isContactModalOpen && (
@@ -114,6 +120,7 @@ function Hero() {
       )}
 
       <Footer />
+      
     </div>
   )
 }
