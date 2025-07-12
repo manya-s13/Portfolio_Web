@@ -67,9 +67,7 @@ function About() {
       <div className="pt-10">
         <h1 className="text-[#FFB4AD] text-3xl text-center">Welcome to my little corner on the internet {'<3'}</h1>
         
-        {/* Main Content Area - Side by Side Layout */}
         <div className="flex items-start justify-between px-10 mt-16">
-          {/* Left Side - Description */}
           <div className="flex-1 pr-8">
             <h1 className="text-white text-2xl"> 
               Manya is a developer and a curious creator <br /> 
@@ -88,16 +86,14 @@ function About() {
               </button>
             </div>
             
-            {/* Camera Viewer */}
             {openCamera && (
               <div className="fixed inset-0 flex items-center justify-center z-50">
-                {/* Semi-transparent overlay */}
+                
                 <div 
                   className="absolute inset-0 bg-black/50 backdrop-blur-sm"
                   onClick={() => setOpenCamera(false)}
                 ></div>
                 
-                {/* Camera positioned in center */}
                 <div className="relative z-10">
                   <CameraViewer images={cameraImages} onClose={() => setOpenCamera(false)} />
                 </div>
@@ -105,17 +101,13 @@ function About() {
             )}
           </div>
           
-          {/* Right Side - Carousel Container with exact styling */}
           <div className="flex-1 max-w-xs">
-            {/* Window-like container with title bar */}
             <div className="border-4 border-[#e6e6e3] bg-[#e6e6e3]">
-              {/* Title bar */}
               <div className="bg-[#e6e6e3] px-4 py-2 flex justify-between items-center border-b border-gray-400">
                 <h2 className="text-black text-xl">{currentItem.title}</h2>
                 <button className="text-black text-lg font-bold px-2"> <X /> </button>
               </div>
               
-              {/* Image area */}
               <div className="w-full h-48 bg-white overflow-hidden">
                 <img 
                   src={currentItem.image} 
@@ -124,14 +116,11 @@ function About() {
                 />
               </div>
               
-              {/* Black bottom section */}
               <div className="bg-black p-4">
-                {/* Grey text box */}
                 <div className="bg-[#6E6D6D] p-2 mb-4">
                   <p className="text-white text-lg leading-relaxed">{currentItem.description}</p>
                 </div>
                 
-                {/* Navigation buttons */}
                 <div className="flex justify-center space-x-4">
                   <button 
                     onClick={prevSlide}

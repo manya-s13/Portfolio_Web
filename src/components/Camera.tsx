@@ -14,14 +14,12 @@ export const CameraViewer: React.FC<CameraViewerProps> = ({ images, onClose }) =
 
   return (
     <div className="">
-      {/* Camera Frame Background */}
       <img
         src="/camera.png"
         alt="Camera Frame"
         
       />
 
-      {/* LCD Screen Area */}
       <div className="">
         <img
           src={images[currentIndex]}
@@ -30,7 +28,6 @@ export const CameraViewer: React.FC<CameraViewerProps> = ({ images, onClose }) =
         />
       </div>
 
-      {/* Next Button (bottom right circle) */}
       <button
         onClick={handleNext}
         className="absolute bottom-[125px] right-[40px] w-[36px] h-[36px] backdrop-blur-md border border-gray-400 rounded-full flex items-center justify-center hover:bg-white"
@@ -38,7 +35,6 @@ export const CameraViewer: React.FC<CameraViewerProps> = ({ images, onClose }) =
         ➤
       </button>
 
-      {/* Close Button (top right) */}
       <button
         onClick={onClose}
         className="absolute top-2 right-2 bg-black text-white w-6 h-6 rounded-full flex items-center justify-center text-xs hover:bg-gray-600"

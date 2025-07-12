@@ -10,7 +10,6 @@ export default function RetroAboutCard() {
     <div className="absolute top-20 right-4 z-20 w-60">
       <div className="bg-[#E6E6E3] border-4 border-[#E6E6E3]" >
         
-        {/* Header */}
         <div className="bg-gray-300/20 border-b-2 border-gray-200 p-2 flex justify-between items-center">
           <h2 className="text-black font-bold text-lg">LIL' ABOUT ME</h2>
           <button 
@@ -21,7 +20,6 @@ export default function RetroAboutCard() {
           </button>
         </div>
 
-        {/* Content */}
         <div className="bg-black text-gray-200 p-5 min-h-[150px] relative">
           <div className="text-md leading-relaxed space-y-3">
             <p>
@@ -32,13 +30,8 @@ export default function RetroAboutCard() {
             </p>
           </div>
 
-          {/* Bottom right corner text */}
-          {/* <div className="absolute bottom-2 right-2 text-gray-400 text-xs">
-            <span className="text-blue-400">⚡</span> ABOUT ME
-          </div> */}
         </div>
 
-        {/* Bottom border effect */}
         <div className="h-1 bg-black"></div>
       </div>
     </div>
