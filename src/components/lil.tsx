@@ -20,8 +20,8 @@ export default function RetroAboutCard() {
           </button>
         </div>
 
-        <div className="bg-black text-gray-200 p-6 min-h-[160px] relative">
-          <div className="text-lg leading-relaxed space-y-3">
+        <div className="bg-black text-gray-200 px-2 min-h-[160px] relative">
+          <div className="text-lg">
             <p>
              Manya is a 21 year old exploring the space between design and engineering  
               <span > 🔧</span>crafting her creative playground through design, development, and writing.{' '}
