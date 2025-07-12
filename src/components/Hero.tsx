@@ -32,7 +32,7 @@ function Hero() {
         }}
         dragElastic={0.1}
         whileDrag={{ scale: 1.1 }}
-        className="bg-black border-3 border-white text-white p-2 text-2xl cursor-move absolute top-32 left-12 z-10"
+        className="hidden md:block bg-black border-3 border-white text-white p-4 text-2xl cursor-move absolute top-32 left-12 z-10"
         style={{ imageRendering: 'pixelated' }}
       >
         <p>Figuring how to <br /> center a div</p>
@@ -46,7 +46,7 @@ function Hero() {
           <div className="relative text-4xl text-center mt-8">
             Hi! I am a developer <br /> based in India
             
-            <div className="absolute left-[-400px] top-20 flex space-x-20">
+            <div className="hidden md:flex absolute left-[-400px] top-20y space-x-20">
             <a href="https://manyaa.substack.com" target="_blank" className="cursor-pointer hover:scale-110"><img src="page.png" width={60} height={60} alt="page" /><span className="text-2xl">Substack</span></a>
               <a href="https://drive.google.com/file/d/1EPetQxZsZ1COa8stpq8vsqyxY_OPTwsx/view?usp=sharing" target="_blank" className="cursor-pointer hover:scale-110"><img src="folder.png" width={60} height={60} alt="folder" /> <span className="text-2xl">Resume</span> </a>
             </div>

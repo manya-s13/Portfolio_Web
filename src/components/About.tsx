@@ -26,11 +26,13 @@ const carouselData = [
 
 const buttonStyle = `
     bg-[#B8B8B8]
-    px-4 py-2
+    px-2 py-1
+    sm:px-4 sm:py-2
     rounded-sm
-    text-xl text-black
+    text-sm sm:text-lg lg:text-xl text-black
     transition-all duration-200
-    shadow-[5px_5px_0px_0px_white]
+    shadow-[3px_3px_0px_0px_white]
+    sm:shadow-[5px_5px_0px_0px_white]
     hover:shadow-none
     hover:translate-y-1
     cursor-pointer
@@ -44,7 +46,6 @@ function About() {
     "/mee.JPG",
     "/beach.jpeg",
     "/me.png",
-    "/lala.HEIC",
     "/books.jpeg",
   ];
 
@@ -63,19 +64,21 @@ function About() {
   const currentItem = carouselData[currentIndex];
 
   return (
-    <div id='about' className="h-screen bg-black">
-      <div className="pt-10">
-        <h1 className="text-[#FFB4AD] text-3xl text-center">Welcome to my little corner on the internet {'<3'}</h1>
+    <div id='about' className="min-h-screen bg-black">
+      <div className="pt-6 sm:pt-10 px-4 sm:px-10">
+        <h1 className="text-[#FFB4AD] text-xl sm:text-2xl lg:text-3xl text-center">Welcome to my little corner on the internet {'<3'}</h1>
         
-        <div className="flex items-start justify-between px-10 mt-16">
-          <div className="flex-1 pr-8">
-            <h1 className="text-white text-2xl"> 
-              Manya is a developer and a curious creator <br /> 
-              who loves creating digital spaces that feel <br /> 
-              intentional and alive. Seeking purpose through <br /> 
+        <div className="flex flex-col lg:flex-row items-start justify-between mt-8 sm:mt-16 gap-8 lg:gap-0">
+          <div className="flex-1 lg:pr-8">
+            <h1 className="text-white text-lg sm:text-xl lg:text-2xl leading-relaxed"> 
+              Manya is a developer and a curious creator <br className="hidden sm:block" /> 
+              who loves creating digital spaces that feel <br className="hidden sm:block" /> 
+              intentional and alive. Seeking purpose through <br className="hidden sm:block" /> 
               work that makes an impact.
             </h1>
-            <div className='flex gap-x-6 py-10 items-center'>
+            
+            {/* Desktop-only images and camera */}
+            <div className='hidden lg:flex gap-x-6 py-10 items-center'>
               <img src='/lap.png' width={150} height={70} className='hover:skew-x-12 transition-transform duration-300' />
               <img src='/coffee.png' width={90} height={90} className='hover:skew-x-12 transition-transform duration-300' />
               <button 
@@ -101,7 +104,8 @@ function About() {
             )}
           </div>
           
-          <div className="flex-1 max-w-xs">
+          {/* Desktop-only carousel */}
+          <div className="hidden lg:block flex-1 max-w-xs">
             <div className="border-4 border-[#e6e6e3] bg-[#e6e6e3]">
               <div className="bg-[#e6e6e3] px-4 py-2 flex justify-between items-center border-b border-gray-400">
                 <h2 className="text-black text-xl">{currentItem.title}</h2>
@@ -139,16 +143,17 @@ function About() {
             </div>
           </div>
         </div>
-        <div className='flex flex-col px-10'>
+        
+        <div className='flex flex-col mt-8 lg:mt-0'>
           <div className="">
            
-            <p className='text-white text-xl mb-6'>You can reach out to me at: 
+            <p className='text-white text-base sm:text-lg lg:text-xl mb-4 sm:mb-6'>You can reach out to me at: 
               <a href="mailto:manyasharma137@gmail.com" className='font-bold hover:underline ml-2'>
                 manyasharma137@gmail.com
               </a>
             </p>
             
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-4">
               <a href="https://x.com/cinamonn_girll" target='_blank' className={buttonStyle}>
                 Twitter
               </a>
