@@ -3,6 +3,7 @@ import {motion} from "framer-motion"
 import RetroAboutCard from "./lil"
 import { useState } from "react"
 import { X } from "lucide-react"
+import CustomMusicPlayer from "./music"
 
 function Hero() {
 
@@ -50,14 +51,21 @@ function Hero() {
           <div className="relative text-4xl text-center mt-8">
             Hi! I am a developer <br /> based in India
             
-            <div className="hidden md:flex absolute left-[-400px] top-20y space-x-20">
+            <div className="hidden md:flex absolute left-[-400px] top-20 space-x-10">
             <a href="https://manyaa.substack.com" target="_blank" className="cursor-pointer hover:scale-110"><img src="page.png" width={60} height={60} alt="page" /><span className="text-2xl">Substack</span></a>
               <a href="https://drive.google.com/file/d/1EPetQxZsZ1COa8stpq8vsqyxY_OPTwsx/view?usp=sharing" target="_blank" className="cursor-pointer hover:scale-110"><img src="folder.png" width={60} height={60} alt="folder" /> <span className="text-2xl">Resume</span> </a>
+              
+            <div className="cursor-pointer top-0">
+            <CustomMusicPlayer />
+            </div>
+            
+
             </div>
 
             <div className="absolute right-[-300px] top-14">
             <div className="cursor-pointer hover:scale-110" onClick={openContactModal}><img src="email.png" width={60} height={60} alt="folder" /> <span className="text-2xl">Contact</span> </div>
             </div>
+            
             
           </div>
           
