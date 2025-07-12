@@ -1,5 +1,5 @@
 import { X } from 'lucide-react';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { CameraViewer } from './Camera';
 
 const carouselData = [
@@ -41,7 +41,7 @@ function About() {
   const [openCamera, setOpenCamera] = useState(false);
 
   const cameraImages = [
-    "mee.JPG",
+    "/mee.JPG",
     "/beach.jpeg",
     "/me.png",
     "/lala.HEIC",

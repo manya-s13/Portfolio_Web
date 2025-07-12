@@ -1,20 +1,17 @@
 "use client";
 import React, {
   useEffect,
-  useRef,
   useState,
   createContext,
-  useContext,
   type JSX,
 } from "react";
 import {
   IconArrowNarrowLeft,
   IconArrowNarrowRight,
-  IconX,
+
 } from "@tabler/icons-react";
 import { cn } from "../../lib/utils";
-import { AnimatePresence, motion } from "motion/react";
-import { useOutsideClick } from "../../hooks/use-outside-click";
+import {  motion } from "motion/react";
 import { ExternalLink, Github } from "lucide-react";
 
 interface CarouselProps {
@@ -22,11 +19,11 @@ interface CarouselProps {
   initialScroll?: number;
 }
 
+
 type Card = {
   src: string;
   title: string;
   category: string;
-  content: React.ReactNode;
   github?: string;
   live?: string;
   techStack?: string[];
@@ -158,7 +155,6 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
 
 export const Card = ({
   card,
-  index,
   layout = false,
 }: {
   card: Card;
@@ -236,7 +232,15 @@ export const BlurImage = ({
   className,
   alt,
   ...rest
-}: ImageProps) => {
+}: {
+  height?: number;
+  width?: number;
+  src: string;
+  className?: string;
+  alt?: string;
+  fill?: boolean;
+  [key: string]: any;
+}) => {
   const [isLoading, setLoading] = useState(true);
   return (
     <img
@@ -251,7 +255,6 @@ export const BlurImage = ({
       height={height}
       loading="lazy"
       decoding="async"
-      blurDataURL={typeof src === "string" ? src : undefined}
       alt={alt ? alt : "Background of a beautiful view"}
       {...rest}
     />
