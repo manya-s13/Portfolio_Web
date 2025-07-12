@@ -66,7 +66,7 @@ const data = [
     category: "Saas Landing Page",
     title: "LanX",
     src: "/p7.png",
-    github: "https://github.com/manya-s13/DriftUI.git",
+    github: "https://github.com/manya-s13/LanX.git",
     techStack: ["React", "TypeScript", "Tailwind", "Framer-Motion"],
     
   }
