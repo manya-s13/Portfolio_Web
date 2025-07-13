@@ -1,5 +1,4 @@
 import  { useRef, useState } from "react";
-import { FaPlay, FaPause } from "react-icons/fa";
 
 const CustomMusicPlayer = () => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
